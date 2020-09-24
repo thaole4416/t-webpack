@@ -1,4 +1,4 @@
-const sum = require("./helpers");
+import sum from './helpers'
 
 const s = sum(1, 2);
 console.log(s);
