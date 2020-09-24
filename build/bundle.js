@@ -86,15 +86,15 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/helpers.js":
-/*!************************!*\
-  !*** ./src/helpers.js ***!
-  \************************/
-/*! exports provided: default */
+/***/ "./src/image.js":
+/*!**********************!*\
+  !*** ./src/image.js ***!
+  \**********************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction sum(a, b) {\n  return a + b;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (sum);\n\n//# sourceURL=webpack:///./src/helpers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);\n\nvar image = document.createElement('img');\nimage.src = 'http://lorempixel.com/400/400';\ndocument.body.appendChild(image);\n\n//# sourceURL=webpack:///./src/image.js?");
 
 /***/ }),
 
@@ -106,7 +106,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction sum(a, b) {\n  retur
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ \"./src/helpers.js\");\n\nvar s = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(1, 2);\nconsole.log(s);\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _image__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./image */ \"./src/image.js\");\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/style.css":
+/*!***********************!*\
+  !*** ./src/style.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/style.css?");
 
 /***/ })
 
