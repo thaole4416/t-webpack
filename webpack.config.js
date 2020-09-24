@@ -1,22 +1,28 @@
-const path = require("path");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const config = {
-  entry: "./src/index.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "build"),
-  },
-  mode: "development",
-  module: {
-    rules: [
-      { use: "babel-loader", test: /\.js$/ },
-      {
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        test: /\.css$/i,
-      },
-    ],
-  },
-  plugins: [new MiniCssExtractPlugin({filename: 'style.css'})],
-};
+const path = require('path')
 
-module.exports = config;
+module.exports = {
+    entry: {
+        bundle: './src/index.js'
+    },
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename:'bundle.js'
+    },
+    module: {
+        rules: [
+            {
+                use: 'babel-loader',
+                test: /\.js$/,
+                exclude: [/node_modules/]
+            },
+            {
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ],
+                test: /\.css$/
+            }
+        ]
+    },
+    mode: 'development'
+}
